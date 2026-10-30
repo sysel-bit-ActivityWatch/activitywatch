@@ -27,7 +27,7 @@
 	url = https://github.com/activitywatch/aw-tauri
 [submodule "awatcher"]
 	path = awatcher
-	url = https://github.com/2e3s/awatcher
+	url = git@github.com:sysel-bit-ActivityWatch/awatcher.git
 [submodule "aw-notify"]
 	path = aw-notify
 	url = https://github.com/ActivityWatch/aw-notify-rs.git
