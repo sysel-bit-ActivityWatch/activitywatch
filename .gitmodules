@@ -6,7 +6,7 @@
 	url = git@github.com:sysel-bit-ActivityWatch/aw-client.git
 [submodule "aw-server"]
 	path = aw-server
-	url = https://github.com/ActivityWatch/aw-server.git
+	url = git@github.com:sysel-bit-ActivityWatch/aw-server.git
 [submodule "aw-watcher-afk"]
 	path = aw-watcher-afk
 	url = https://github.com/ActivityWatch/aw-watcher-afk.git
