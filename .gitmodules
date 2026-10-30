@@ -9,19 +9,19 @@
 	url = git@github.com:sysel-bit-ActivityWatch/aw-server.git
 [submodule "aw-watcher-afk"]
 	path = aw-watcher-afk
-	url = https://github.com/ActivityWatch/aw-watcher-afk.git
+	url = git@github.com:sysel-bit-ActivityWatch/aw-watcher-afk.git
 [submodule "aw-qt"]
 	path = aw-qt
 	url = https://github.com/ActivityWatch/aw-qt.git
 [submodule "aw-watcher-window"]
 	path = aw-watcher-window
-	url = https://github.com/ActivityWatch/aw-watcher-window.git
+	url = git@github.com:sysel-bit-ActivityWatch/aw-watcher-window.git
 [submodule "aw-server-rust"]
 	path = aw-server-rust
 	url = https://github.com/ActivityWatch/aw-server-rust.git
 [submodule "aw-watcher-input"]
 	path = aw-watcher-input
-	url = https://github.com/ActivityWatch/aw-watcher-input.git
+	url = git@github.com:sysel-bit-ActivityWatch/aw-watcher-input.git
 [submodule "aw-tauri"]
 	path = aw-tauri
 	url = https://github.com/activitywatch/aw-tauri
