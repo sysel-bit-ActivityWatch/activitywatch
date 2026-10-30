@@ -1,0 +1,25 @@
+[Unit]
+Description=ActivityWatch shared local server
+After=local-fs.target
+
+[Service]
+Type=simple
+User=activitywatch
+Group=activitywatch
+Environment=HOME=/var/lib/activitywatch
+Environment=XDG_DATA_HOME=/var/lib/activitywatch/data
+Environment=XDG_CONFIG_HOME=/var/lib/activitywatch/config
+Environment=XDG_CACHE_HOME=/var/lib/activitywatch/cache
+ExecStart=/opt/activitywatch/aw-server/aw-server --host 127.0.0.1 --port 5600
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+StateDirectory=activitywatch
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/activitywatch
+
+[Install]
+WantedBy=multi-user.target

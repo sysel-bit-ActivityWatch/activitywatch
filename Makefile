@@ -304,6 +304,7 @@ ifneq ($(SKIP_SERVER_RUST),true)
 # modules by scanning its own directory for executables named aw-*, so the
 # binary has to sit at the top level as `aw-awatcher`. Fail closed: a Linux
 # bundle without it silently records nothing on Wayland.
+	$(MAKE) --directory=awatcher build RELEASE=$(RELEASE)
 	@test -x awatcher/target/$(targetdir)/awatcher || { \
 		echo "Error: awatcher binary not found at awatcher/target/$(targetdir)/awatcher (required for Wayland support in the Linux bundle)" >&2; \
 		exit 1; \

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ActivityWatch session watcher
+Comment=Record this user's activity to the shared local ActivityWatch server
+Exec=/opt/activitywatch/start-session-watcher
+Terminal=false
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=10

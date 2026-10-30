@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Run in the graphical login, retaining its user, D-Bus and Wayland environment.
+# A separate root process cannot observe each user's Wayland session.
+unset AW_PROFILE
+desktop=${XDG_CURRENT_DESKTOP:-}
+if [[ ${desktop,,} == *gnome* ]] && command -v gnome-extensions >/dev/null; then
+    gnome-extensions enable focused-window-dbus@flexagoon.com || true
+fi
+# Keep one watcher per user, including when autostart is triggered twice.
+exec 9>"${XDG_RUNTIME_DIR:?Graphical login required}/activitywatch-session.lock"
+flock -n 9 || exit 0
+while true; do
+    /opt/activitywatch/aw-awatcher --host 127.0.0.1 --port 5600 -v || true
+    sleep 5
+done
